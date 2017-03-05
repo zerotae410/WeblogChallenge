@@ -1,11 +1,15 @@
 #WeblogChallenge
 For Processing & Analytical, I have solved these questions by Hadoop 2.7.3 and Java 1.8.
+
 And for MLE questions, I implemented the models by Keras(backgroud as Tessorflow).
 
 ##Processing & Analytical
 Q1. I aggregated hits for sessions with 15 minutes fixed time window, and left session counts for each ip.
+
 Source code is src/java/paytmlabs.Sessionize.java, and output is answer/Q1_sessionize_session_count.txt.
+
 Top 10 results are as follow.
+
 | ip            | session count |
 | ------------- |:-------------:|
 |220.226.206.7	|13             |
@@ -20,8 +24,11 @@ Top 10 results are as follow.
 |54.245.168.44	|10             |
 
 Q2. Calculated the average times of sessions for each ip.
-Source code is src/java/paytmlabs.SessionAverage.java. The total average session time is 88125(ms). 
+
+Source code is src/java/paytmlabs.SessionAverage.java. The total average session time is 88125(ms).
+ 
 Top 10 results for average session times are as follow. (output is answer/Q2_session_average_time.txt)
+
 | ip            | avg session time(ms)|
 | ------------- |:-------------------:|
 |103.29.159.138	|2065413              |
@@ -36,8 +43,11 @@ Top 10 results for average session times are as follow. (output is answer/Q2_ses
 |183.82.103.131	|2042724              |
 
 Q3. Calculated unique urls for sessions.
+
 Source code is src/java/paytmlabs.SessionUniqueUrls.java, and output is answer/Q3_session_unique_url_count.txt.
+
 Sample 10 results are as follow.
+
 | ip            | {sessionId:unique url count} |
 | ------------- |:----------------------------:|
 |1.186.101.79	|{1:12}                        |
@@ -52,9 +62,12 @@ Sample 10 results are as follow.
 |1.186.111.224	|{1:9}{2:12}                   |
 
 Q4. Calculated the longest session for each ip.
+
 Source code is src/java/paytmlabs.SessionLongest.java, and output is answer/Q4_session_longest_time.txt.
+
 Top 10 results are as follow.
-| ip            | {sessionId:unique url count} |
+
+| ip            | the longest session time(ms) |
 | ------------- |:----------------------------:|
 |52.74.219.71	|2069162                       |
 |119.81.61.166	|2068849                       |
@@ -69,5 +82,7 @@ Top 10 results are as follow.
 
 ##Questions for Machine Learning Engineer
 Q1.
+
 Q2.
+
 Q3.
