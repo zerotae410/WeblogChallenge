@@ -36,7 +36,7 @@ model.add(Dense(dimof_middle, input_dim=dimof_input, init='uniform', activation=
 # model.add(Dropout(dropout))
 model.add(Dense(dimof_middle, init='uniform', activation='relu'))
 # model.add(Dropout(dropout))
-model.add(Dense(1, init='uniform', activation='relu'))
+model.add(Dense(1, init='uniform'))
 model.compile(loss='mse', optimizer='sgd', metrics=['accuracy'])
 
 # Train
