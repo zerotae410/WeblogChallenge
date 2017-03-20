@@ -1,9 +1,11 @@
 #WeblogChallenge
+
 For Processing & Analytical, I have solved these questions by Hadoop 2.7.3 and Java 1.8.
 
 And for MLE questions, I implemented the models by Keras(backgroud as Tessorflow).
 
 ##Processing & Analytical
+
 Q1. I aggregated hits for sessions with 15 minutes fixed time window, and left session counts for each ip.
 
 Source code is src/java/paytmlabs.Sessionize.java, and output is answer/Q1_sessionize_session_count.txt.
@@ -81,22 +83,23 @@ Top 10 results are as follow.
 |203.189.176.14	|2065594                       |
 
 ##Questions for Machine Learning Engineer
+
 Q1. Load predicting model for next minute.
 
-Source code is src/python/paytmlabs.predict_load.py
+Source code is src/python/paytmlabs.predict_load.py.
 
-Model is src/python/paytmlabs.predict_load_model.h5
+Model is src/python/paytmlabs.predict_load_model.h5.
 
 Features are each request count for last four concatenate minutes.
 
 Predicted load is 3621.0234 per minute, 60.3504 per second.
 
 
-Q2. Session time predicting model for a given IP
+Q2. Session time predicting model for a given IP.
 
 Source code is src/python/paytmlabs.predict_session.py.
 
-Model is src/python/paytmlabs.predict_session_time_model.h5
+Model is src/python/paytmlabs.predict_session_time_model.h5.
 
 Features are session_count, total_session_time, longest_session_time, and request_count.
 
@@ -109,11 +112,11 @@ Predicted session time for '1.186.111.224' is 663360(ms), for '210.19.202.179' i
 '210.19.202.179' is not in log, feature values are [1, 0, 0, 1].
 
 
-Q3. Unique url count predicting model for a given IP
+Q3. Unique url count predicting model for a given IP.
 
 Source code is src/python/paytmlabs.predict_session.py.
 
-Model is src/python/paytmlabs.predict_url_count_model.h5
+Model is src/python/paytmlabs.predict_url_count_model.h5.
 
 Features are session_count, total_session_time, longest_session_time, and request_count.
 
@@ -122,4 +125,5 @@ Label is unique_url_count.
 Predicted session time for '1.186.111.224' is 11.1463, for '210.19.202.179' is 1.6867.
 
 '1.186.111.224' is in logs(train data), feature values are [2, 940913, 782745, 24].
+
 '210.19.202.179' is not in log, feature values are [1, 0, 0, 1].
